@@ -2,14 +2,6 @@
  "siteUrl":{
     "url":"https://www.demoblaze.com/"
  },
-    "signupcredentials": {
-            "username": "varnapk9",
-            "password": "Varnapk102@demo"   
-    },
-    "validlogincredentials":{
-        "username":"varnapk9",
-        "password":"Varnapk102@demo"
-    },
     "invalidlogincredentials":[
         {
             "testcase":"Invalidusername and ValidPassword",
@@ -38,11 +30,3 @@
     }
 
 }
-  
-
-    
- 
-   
-
- 
-

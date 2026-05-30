@@ -2,6 +2,7 @@ import {test, expect} from '@playwright/test';
 import { DemoProjectLoginPage } from '../Pages/DemoProjectLoginPage';
 import { DemoProjectGeneral } from '../Pages/DemoProjectGeneral';
 const credentialsList = require('../utils/demoprojecttestdata.json');
+const validCredential=require('../utils/newUser.json')
 
 test.describe('Login Suite', () => {
 let demoprojectgeneral
@@ -17,8 +18,8 @@ test.beforeEach(async ({ page }) => {
 
 test('Login using valid Credentials', async({page})=>{
     test.setTimeout(60000);
-    const username=credentialsList.validlogincredentials.username
-    const password= credentialsList.validlogincredentials.password
+    const username=validCredential.username
+    const password=validCredential.password
     await demoprojectloginpage.login(username,password)
     
     const logoutText=page.locator('#logout2')

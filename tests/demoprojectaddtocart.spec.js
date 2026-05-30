@@ -3,6 +3,7 @@ import { DemoProjectLoginPage } from '../Pages/DemoProjectLoginPage';
 import { DemoProjectAddtocartPage } from '../Pages/DemoProjectAddtoCartPage';
 import { DemoProjectGeneral } from '../Pages/DemoProjectGeneral';
 const credentialsList = require('../utils/demoprojecttestdata.json');
+const validCredential=require('../utils/newUser.json')
     const name=credentialsList.placeorderDetails.name
     const country=credentialsList.placeorderDetails.country
     const city=credentialsList.placeorderDetails.city
@@ -22,8 +23,8 @@ test.describe('Add to Cart Suite', () => {
     
     await demoprojectgeneral.goto(url);
     await demoprojectloginpage.login(
-      credentialsList.validlogincredentials.username,
-      credentialsList.validlogincredentials.password
+      validCredential.username,
+      validCredential.password
     );
 
     page.on('dialog', async dialog => {
@@ -35,7 +36,7 @@ test.describe('Add to Cart Suite', () => {
 
 
 test('Select One Product', async({page})=>{
-    
+   test.setTimeout(60000)
    await demoprojectaddtocart.addToCartAnyOneProduct()
 
 })

@@ -10,6 +10,8 @@ export class DemoProjectSignupPage {
  // async goto() {
  //   await this.page.goto('https://www.demoblaze.com/');
 //  }
+
+
   async signinbuttonClick(){
     await this.signupbutton.click();
   }
